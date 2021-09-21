@@ -1,6 +1,9 @@
 # citas_app
 
-A new Flutter project.
+Integrantes del proyecto:
+- Laura Baquero
+- Julián Duque
+- Bryan Herrera
 
 ## Idea del proyecto 
 
