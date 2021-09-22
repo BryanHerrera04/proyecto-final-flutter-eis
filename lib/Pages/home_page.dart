@@ -5,13 +5,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
 
-  Widget _bottomAction(IconData icon) {
-    return InkWell(
-      child: Icon(icon),
-      onTap: () {},
-    );
-  }
-
   @override
   _HomepageState createState() => _HomepageState();
 }
@@ -39,11 +32,16 @@ class _HomepageState extends State<Homepage> {
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
-          children: <Widget>[
-            // _bottomAction()
-          ],
+          children:bottomAction(),
         ),
       ),
+    );
+  }
+
+  bottomAction(IconData icon) {
+    return InkWell(
+      child: Icon(icon),
+      onTap: () {},
     );
   }
 }
