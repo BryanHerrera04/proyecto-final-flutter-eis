@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "957497346456",
+    "project_id": "citasauth",
+    "storage_bucket": "citasauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957497346456:android:ec2c807a3179a5c55483ed",
+        "android_client_info": {
+          "package_name": "com.example.citas_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957497346456-4e963jnabuk9age5hv7m8s275nbsv4q3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjkmEgLfBfr04G2FMkzModFD68RneO7qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957497346456-4e963jnabuk9age5hv7m8s275nbsv4q3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
