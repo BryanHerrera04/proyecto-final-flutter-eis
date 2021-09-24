@@ -1,3 +1,4 @@
+import 'package:citas_app/Pages/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -13,35 +14,68 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        flexibleSpace: Container(
-            decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.topRight,
-              colors: [
-                HexColor('#ED213A'),
-                HexColor('#93291E'),
-              ]),
-        )),
-        title: const Text(
-          "Citas",
-          style: TextStyle(fontSize: 28),
-        ),
-        centerTitle: true,
-      ),
+//-------------------------AppBar---------------------------------
+      // appBar: AppBar(
+      //   flexibleSpace: Container(
+      //       decoration: BoxDecoration(
+      //     gradient: LinearGradient(
+      //         begin: Alignment.topLeft,
+      //         end: Alignment.topRight,
+      //         colors: [
+      //           HexColor('#ED213A'),
+      //           HexColor('#93291E'),
+      //         ]),
+      //   )),
+      //   title: const Text(
+      //     "Citas",
+      //     style: TextStyle(fontSize: 28),
+      //   ),
+      //   centerTitle: true,
+      // ),
+//----------------------------------------------------------------
+//------------------------------Body------------------------------
+      body: Body(),
+//----------------------------------------------------------------
+//-----------------------Bottom Navigation Bar--------------------
       bottomNavigationBar: BottomAppBar(
+        notchMargin: 8.0,
+        shape: const CircularNotchedRectangle(),
         child: Row(
-          children:bottomAction(),
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            bottomAction(MyFlutterApp.flame),
+            bottomAction(FontAwesomeIcons.history),
+            const SizedBox(width: 50.0),
+            bottomAction(FontAwesomeIcons.heart),
+            bottomAction(FontAwesomeIcons.user),
+          ],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton:
+          FloatingActionButton(child: const Icon(Icons.add), onPressed: () {}),
     );
   }
 
+//--------------------------------------------------------------------------
+//--------------------------------Funciones---------------------------------
   bottomAction(IconData icon) {
     return InkWell(
-      child: Icon(icon),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Icon(icon),
+      ),
       onTap: () {},
     );
   }
+}
+
+Body() {
+  // return SafeArea(
+  //   child:Column(
+  //     children: [
+
+  //     ],
+  //   ))
 }
