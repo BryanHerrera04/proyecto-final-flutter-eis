@@ -13,13 +13,14 @@ class citas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Citas',
+      title: 'CitasApp',
       theme: ThemeData(
           primarySwatch: Colors.blue,
           textTheme: GoogleFonts.montserratAlternatesTextTheme(
             Theme.of(context).textTheme,
           )),
-      home: const Homepage(),
+      debugShowCheckedModeBanner: false,
+      home: Homepage(),
     );
   }
 }
