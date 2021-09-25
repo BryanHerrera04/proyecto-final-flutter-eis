@@ -1,7 +1,8 @@
-import 'package:citas_app/Pages/icons.dart';
+import 'package:citas_app/icons.dart';
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
+// import 'package:hexcolor/hexcolor.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:citas_app/main.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -72,10 +73,9 @@ class _HomepageState extends State<Homepage> {
 }
 
 Body() {
-  // return SafeArea(
-  //   child:Column(
-  //     children: [
-
-  //     ],
-  //   ))
+  return Scaffold(
+    body: Center(
+      child: ElevatedButton(child: const Text('Log out'), onPressed: () {}),
+    ),
+  );
 }

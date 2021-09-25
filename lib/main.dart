@@ -1,13 +1,21 @@
+import 'package:citas_app/Pages/login_page.dart';
 import 'package:citas_app/theme.dart';
 import 'package:flutter/material.dart';
 import 'Pages/home_page.dart';
+import 'Pages/login_page.dart';
+import 'package:provider/provider.dart';
 
-void main(List<String> args) {
-  runApp(const citas());
+void main() => runApp(const Citas());
+
+class Citas extends StatefulWidget {
+  const Citas({Key? key}) : super(key: key);
+
+  @override
+  _CitasState createState() => _CitasState();
 }
 
-class citas extends StatelessWidget {
-  const citas({Key? key}) : super(key: key);
+class _CitasState extends State<Citas> {
+  bool loggedIn = false;
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +23,24 @@ class citas extends StatelessWidget {
       title: 'Citas',
       debugShowCheckedModeBanner: false,
       theme: darkThemeData(context),
-      // theme: ThemeData(
-      //     primarySwatch: Colors.blue,
-      //     textTheme: GoogleFonts.montserratAlternatesTextTheme(
-      //       Theme.of(context).textTheme,
-      //     )),
-      home: const Homepage(),
+      // home: const loginpage(),
+      routes: {
+        '/': (BuildContext contex) {
+          if (loggedIn) {
+            return const Homepage();
+          } else {
+            // Navigator.push(context,
+            //     MaterialPageRoute(builder: (contex) => const loginpage()));
+            return loginpage(
+              login_succes: () {
+                setState(() {
+                  loggedIn = true;
+                });
+              },
+            );
+          }
+        },
+      },
     );
   }
 }
