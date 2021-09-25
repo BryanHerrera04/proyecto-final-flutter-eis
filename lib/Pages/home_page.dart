@@ -40,22 +40,21 @@ class _HomepageState extends State<Homepage> {
 //-----------------------Bottom Navigation Bar--------------------
       bottomNavigationBar: BottomAppBar(
         notchMargin: 8.0,
-        shape: const CircularNotchedRectangle(),
+        // shape: const CircularNotchedRectangle(),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             bottomAction(MyFlutterApp.flame),
-            bottomAction(FontAwesomeIcons.history),
-            const SizedBox(width: 50.0),
+            // bottomAction(FontAwesomeIcons.history),
             bottomAction(FontAwesomeIcons.heart),
             bottomAction(FontAwesomeIcons.user),
           ],
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton:
-          FloatingActionButton(child: const Icon(Icons.add), onPressed: () {}),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // floatingActionButton:
+      //     FloatingActionButton(child: const Icon(Icons.add), onPressed: () {}),
     );
   }
 
