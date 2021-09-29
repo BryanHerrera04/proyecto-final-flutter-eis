@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Register extends StatefulWidget {
-  final Function? toggleScreen;
-
-  const Register({Key? key, this.toggleScreen}) : super(key: key);
   @override
   _RegisterState createState() => _RegisterState();
 }
@@ -30,6 +28,9 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Regresar al Login'),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -39,10 +40,6 @@ class _RegisterState extends State<Register> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.arrow_back_ios,
-                          color: Theme.of(context).primaryColor)),
                   SizedBox(height: 60),
                   Text(
                     'Bienvenidos',
@@ -86,8 +83,6 @@ class _RegisterState extends State<Register> {
                   ),
                   MaterialButton(
                     onPressed: () {
-                      //Acá voy
-
                       if (_formkey.currentState!.validate()) {
                         print('Email: ${_emailController}');
                         print('Email: ${_passwordController}');

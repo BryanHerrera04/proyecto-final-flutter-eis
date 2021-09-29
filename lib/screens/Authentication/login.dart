@@ -1,9 +1,13 @@
+import 'dart:html';
+import 'package:citas_app/screens/register.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Login extends StatefulWidget {
-  final Function? toggleScreen;
+  //final Function toggleScreen;
+  final Register register = Register();
 
-  const Login({Key? key, this.toggleScreen}) : super(key: key);
+  /* const Login({Key? key, this.toggleScreen}) : super(key: key); */
   @override
   _LoginState createState() => _LoginState();
 }
@@ -108,10 +112,16 @@ class _LoginState extends State<Login> {
                       SizedBox(
                         width: 5,
                       ),
-                      TextButton(
-                        onPressed: () => widget.toggleScreen(),
-                        child: Text('Registrarse'),
-                      )
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Register()));
+                        },
+                        child: Text('Registrarse',
+                            style: TextStyle(color: Colors.red)),
+                      ),
                     ],
                   )
                 ],

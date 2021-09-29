@@ -33,11 +33,6 @@ class _HomepageState extends State<Homepage> {
         centerTitle: true,
       ),
       body: _body(),
-      //bottomNavigationBar: BottomAppBar(
-      //child: Row(
-      //children: bottomAction(),
-      //),
-      //),
     );
   }
 
@@ -45,13 +40,6 @@ class _HomepageState extends State<Homepage> {
     return FutureBuilder(
       future: _init,
       builder: (BuildContext context, AsyncSnapshot snapshot) {
-        //if (snapshot.hasError) {
-        //return ErrorWidget();
-        //} else if (snapshot.hasData) {
-        //return Login();
-        //} else {
-        //return Loading();
-        //}
         if (snapshot.hasData) {
           return Loading();
         } else {
@@ -64,13 +52,6 @@ class _HomepageState extends State<Homepage> {
       },
     );
   }
-
-  //bottomAction(IconData icon) {
-  //return InkWell(
-  //child: Icon(icon),
-  //onTap: () {},
-  //);
-  //}
 }
 
 class ErrorWidget extends StatelessWidget {
@@ -79,7 +60,7 @@ class ErrorWidget extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Column(
-          children: [Icon(Icons.error), Text('Something went Wrond!')],
+          children: [Icon(Icons.error), Text('¡Algo salió mal!')],
         ),
       ),
     );
