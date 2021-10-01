@@ -1,5 +1,4 @@
 import 'package:citas_app/screens/Authentication/login.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -11,7 +10,6 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  final _init = Firebase.initializeApp();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +36,6 @@ class _HomepageState extends State<Homepage> {
 
   _body() {
     return FutureBuilder(
-      future: _init,
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
           return Loading();

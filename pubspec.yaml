@@ -33,8 +33,11 @@ dependencies:
   font_awesome_flutter: ^9.1.0
   hexcolor: ^2.0.5
   provider: ^6.0.0
-  firebase_core: ^1.0.3
-  firebase_auth: ^1.0.2
+  #firebase_core:
+  #firebase_auth:
+  #firebase_auth_web:
+  #cloud_firestore:
+
 
 dev_dependencies:
   flutter_lints: ^1.0.0

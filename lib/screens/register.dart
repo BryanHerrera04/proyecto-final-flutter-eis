@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class Register extends StatefulWidget {
   @override
@@ -81,23 +80,28 @@ class _RegisterState extends State<Register> {
                   SizedBox(
                     height: 30,
                   ),
-                  MaterialButton(
-                    onPressed: () {
-                      if (_formkey.currentState!.validate()) {
-                        print('Email: ${_emailController}');
-                        print('Email: ${_passwordController}');
-                      }
+                  GestureDetector(
+                    onTap: () {
+                      //AddUser('Bryan', 'lastname', 23);
                     },
-                    height: 70,
-                    minWidth: double.infinity,
-                    color: Theme.of(context).primaryColor,
-                    textColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Text(
-                      'Registrar',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    child: MaterialButton(
+                      onPressed: () {
+                        if (_formkey.currentState!.validate()) {
+                          print('Email: ${_emailController}');
+                          print('Email: ${_passwordController}');
+                        }
+                      },
+                      height: 70,
+                      minWidth: double.infinity,
+                      color: Theme.of(context).primaryColor,
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Text(
+                        'Registrar',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
                   SizedBox(
