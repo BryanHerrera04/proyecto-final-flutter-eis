@@ -1,3 +1,4 @@
+import 'package:citas_app/Pages/perfil_user.dart';
 import 'package:flutter/material.dart';
 
 class Salir extends StatefulWidget {
@@ -15,7 +16,10 @@ class _SalirState extends State<Salir> {
       content: const Text('Selecciona una opción'),
       actions: <Widget>[
         TextButton(
-          onPressed: () => Navigator.pop(context, 'Cancel'),
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => PerfilUser()));
+          },
           child: const Text('Cancel'),
         ),
         TextButton(
