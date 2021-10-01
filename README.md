@@ -28,4 +28,4 @@ debe seleccionar la opción “Me gusta”, para guardar la
 información de ese perfil. Una app muy popular de citas en
 el mercado en este momento es Tinder.
 
-#Autor: Bryan Herrera
+# Autor: Bryan Herrera
