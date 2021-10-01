@@ -1,3 +1,5 @@
+import 'dart:core';
+import 'package:citas_app/screens/perfil.dart';
 import 'package:citas_app/screens/register.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +30,11 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
+    final List<Map<String, String>> user = [
+      {"name": "Bryan", "email": "correo@prueba.com", "password": "123456"},
+      {"Name": "BBBBBB", "Number": "2", "State": "no"},
+      {"Name": "CCCCCC", "Number": "3", "State": "Yes"}
+    ];
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -81,8 +88,8 @@ class _LoginState extends State<Login> {
                   MaterialButton(
                     onPressed: () {
                       if (_formkey.currentState!.validate()) {
-                        print('Email: ${_emailController}');
-                        print('Email: ${_passwordController}');
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Perfil()));
                       }
                     },
                     height: 70,
@@ -97,6 +104,33 @@ class _LoginState extends State<Login> {
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                   ),
+                  /* MaterialButton(
+                      onPressed: () {
+                        if (_formkey.currentState!.validate()) {
+                          print('Email: ${_emailController}');
+                          print('Password: ${_passwordController}');
+                          for (int i = 0; i < user.length; i++) {
+                            Map<String, String> map = user[i];
+                            /* map.forEach((key, value) {
+                              print(key);
+                              print(value);
+                            }); */
+                            map.forEach((key, value) => print(value = 'correo@prueba.com'));
+                          }
+                        }
+                      },
+                      height: 70,
+                      minWidth: double.infinity,
+                      color: Theme.of(context).primaryColor,
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Text(
+                        'Login',
+                        style:
+                            TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                    ), */
                   SizedBox(
                     height: 20,
                   ),
