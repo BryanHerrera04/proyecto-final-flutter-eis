@@ -81,6 +81,7 @@ class _LoginState extends State<Login> {
                         prefixIcon: Icon(Icons.vpn_key),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10))),
+                    obscureText: true,
                   ),
                   SizedBox(
                     height: 30,
@@ -104,33 +105,6 @@ class _LoginState extends State<Login> {
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                   ),
-                  /* MaterialButton(
-                      onPressed: () {
-                        if (_formkey.currentState!.validate()) {
-                          print('Email: ${_emailController}');
-                          print('Password: ${_passwordController}');
-                          for (int i = 0; i < user.length; i++) {
-                            Map<String, String> map = user[i];
-                            /* map.forEach((key, value) {
-                              print(key);
-                              print(value);
-                            }); */
-                            map.forEach((key, value) => print(value = 'correo@prueba.com'));
-                          }
-                        }
-                      },
-                      height: 70,
-                      minWidth: double.infinity,
-                      color: Theme.of(context).primaryColor,
-                      textColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Text(
-                        'Login',
-                        style:
-                            TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                    ), */
                   SizedBox(
                     height: 20,
                   ),

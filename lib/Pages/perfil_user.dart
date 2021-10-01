@@ -21,11 +21,19 @@ class _PerfilUserState extends State<PerfilUser> {
         Expanded(
           flex: 5,
           child: Container(
-            child: Text('''Bryan Herrea
-                24 Años
+            child: Text(
+              '''
+               Bryan Herrea
+               24 Años
                 Ing. Mecatrónico
                 Villavicencio
-                Jugador Baloncesto'''),
+                Jugador Baloncesto''',
+              textDirection: TextDirection.ltr,
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.black87,
+              ),
+            ),
           ),
         ),
       ],

@@ -19,19 +19,34 @@ class _MatchesState extends State<Matches> {
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(50.0),
+                    padding: const EdgeInsets.all(5.0),
                     child: Container(
                       child: ElevatedButton(
                         onPressed: () {},
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('''
-                          Yudy Najar
-                          23 Años
-                          Tunja
-                          Est. Derecho
-                          ''')
+                            Row(
+                              children: [
+                                Image(
+                                    image: AssetImage('assets/mujer.jpg'),
+                                    height: 120,
+                                    alignment: Alignment.topLeft),
+                                Text(
+                                  '''
+                              Yudy Najar
+                              23 Años
+                              Tunja
+                              Est. Derecho
+                              ''',
+                                  textDirection: TextDirection.ltr,
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            ),
                           ],
                         ),
                         style: ElevatedButton.styleFrom(
@@ -43,19 +58,73 @@ class _MatchesState extends State<Matches> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(50.0),
+                    padding: const EdgeInsets.all(5.0),
                     child: Container(
                       child: ElevatedButton(
                         onPressed: () {},
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('''
-                          Yudy Najar
-                          23 Años
-                          Tunja
-                          Est. Derecho
-                          ''')
+                            Row(
+                              children: [
+                                Image(
+                                    image: AssetImage('assets/mujer1.jpg'),
+                                    height: 120,
+                                    alignment: Alignment.topLeft),
+                                Text(
+                                  '''
+                              Maria Díaz
+                              25 Años
+                              Villavicencio
+                              Ing. Civil
+                              ''',
+                                  textDirection: TextDirection.ltr,
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.red[200],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Container(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
+                              children: [
+                                Image(
+                                    image: AssetImage('assets/mujer2.jpg'),
+                                    height: 120,
+                                    alignment: Alignment.topLeft),
+                                Text(
+                                  '''
+                          Erika Gomez
+                          28 Años
+                          Villavicencio
+                          Deportista
+                          ''',
+                                  textDirection: TextDirection.ltr,
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            )
                           ],
                         ),
                         style: ElevatedButton.styleFrom(
