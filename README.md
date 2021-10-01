@@ -1,10 +1,5 @@
 # CitasApp
 
-Integrantes del proyecto:
-- Laura Baquero
-- Julián Duque
-- Bryan Herrera
-
 ## Idea del proyecto 
 
 CitasApp es una aplicación para el usuario que muestra sucesivamente diferentes perfiles de otros
@@ -32,3 +27,5 @@ interesado en conocer y obtener una cita con un usuario se
 debe seleccionar la opción “Me gusta”, para guardar la
 información de ese perfil. Una app muy popular de citas en
 el mercado en este momento es Tinder.
+
+#Autor: Bryan Herrera
